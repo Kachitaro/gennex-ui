@@ -70,6 +70,10 @@
   "resolutions": {
     "vite": "npm:rolldown-vite@7.2.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kachitaro/gennex-ui.git"
+  },
   "keywords": [
     "react",
     "ui",
