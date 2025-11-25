@@ -1,4 +1,4 @@
-import { Theme } from '@/utilities/theme.utilities';
+import { GenColorPalette } from '@/utilities/theme.utilities';
 import { Color, createTheme, PaletteMode } from '@mui/material';
 import { viVN } from '@mui/material/locale';
 
@@ -10,7 +10,7 @@ export const Palette = (opts: {
   secondaryColor: Color;
 }) => {
   const { mode, primaryColor, secondaryColor } = opts;
-  const paletteColor = Theme({ primaryColor, secondaryColor });
+  const paletteColor = GenColorPalette({ primaryColor, secondaryColor });
 
   return createTheme(
     {

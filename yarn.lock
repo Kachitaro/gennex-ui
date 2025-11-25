@@ -496,6 +496,7 @@ __metadata:
     material-react-table: "npm:^3.2.1"
     prettier: "npm:^3.6.2"
     ra-core: "npm:^5.13.1"
+    ra-ui-materialui: "npm:^5.13.2"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
     react-hook-form: "npm:^7.66.1"
@@ -1409,6 +1410,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/trusted-types@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "@types/trusted-types@npm:2.0.7"
+  checksum: 10c0/4c4855f10de7c6c135e0d32ce462419d8abbbc33713b31d294596c0cc34ae1fa6112a2f9da729c8f7a20707782b0d69da3b1f8df6645b0366d08825ca1522e0c
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:8.47.0":
   version: 8.47.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.47.0"
@@ -1918,6 +1926,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"attr-accept@npm:^2.2.4":
+  version: 2.2.5
+  resolution: "attr-accept@npm:2.2.5"
+  checksum: 10c0/9b4cb82213925cab2d568f71b3f1c7a7778f9192829aac39a281e5418cd00c04a88f873eb89f187e0bf786fa34f8d52936f178e62cbefb9254d57ecd88ada99b
+  languageName: node
+  linkType: hard
+
+"autosuggest-highlight@npm:^3.1.1":
+  version: 3.3.4
+  resolution: "autosuggest-highlight@npm:3.3.4"
+  dependencies:
+    remove-accents: "npm:^0.4.2"
+  checksum: 10c0/8cdbb3ecfdd4c60ff00b42c7e6039b1b45b0662447fc28afef4e0f109dda3c69455dd06ae673c6dc91101f8c555b91947680d21076ed7d6a76bf619b4a46d968
+  languageName: node
+  linkType: hard
+
 "available-typed-arrays@npm:^1.0.7":
   version: 1.0.7
   resolution: "available-typed-arrays@npm:1.0.7"
@@ -2218,6 +2242,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-mediaquery@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "css-mediaquery@npm:0.1.2"
+  checksum: 10c0/b7825a78f52ce8a8198e004fcad0d7be1d3c9a0463ecd05ba31a0f2c94fb81468ad6f4d7bf715a6ca775696e7a17500c2a339b5216a6d0f789cbf78f9454d048
+  languageName: node
+  linkType: hard
+
 "csstype@npm:^3.0.2, csstype@npm:^3.1.3, csstype@npm:^3.2.2":
   version: 3.2.3
   resolution: "csstype@npm:3.2.3"
@@ -2341,6 +2372,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"diacritic@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "diacritic@npm:0.0.2"
+  checksum: 10c0/1d9dd0a1188a8186d4fce4a695fc8cb0d65c31a8b3c59cd926636e49a05b30d6bb3f4144018be40bdf0a4937d16bb6705f3b1d1ff9684a426d922fb039f8d8ae
+  languageName: node
+  linkType: hard
+
 "diff@npm:~8.0.2":
   version: 8.0.2
   resolution: "diff@npm:8.0.2"
@@ -2364,6 +2402,18 @@ __metadata:
     "@babel/runtime": "npm:^7.8.7"
     csstype: "npm:^3.0.2"
   checksum: 10c0/f735074d66dd759b36b158fa26e9d00c9388ee0e8c9b16af941c38f014a37fc80782de83afefd621681b19ac0501034b4f1c4a3bff5caa1b8667f0212b5e124c
+  languageName: node
+  linkType: hard
+
+"dompurify@npm:^3.2.4":
+  version: 3.3.0
+  resolution: "dompurify@npm:3.3.0"
+  dependencies:
+    "@types/trusted-types": "npm:^2.0.7"
+  dependenciesMeta:
+    "@types/trusted-types":
+      optional: true
+  checksum: 10c0/66b1787b0bc8250d8f58e13284cf7f5f6bb400a0a55515e7a2a030316a4bb0d8306fdb669c17ed86ed58ff7e53c62b5da4488c2f261d11c58870fe01b8fcc486
   languageName: node
   linkType: hard
 
@@ -2902,6 +2952,15 @@ __metadata:
   dependencies:
     flat-cache: "npm:^4.0.0"
   checksum: 10c0/9e2b5938b1cd9b6d7e3612bdc533afd4ac17b2fc646569e9a8abbf2eb48e5eb8e316bc38815a3ef6a1b456f4107f0d0f055a614ca613e75db6bf9ff4d72c1638
+  languageName: node
+  linkType: hard
+
+"file-selector@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "file-selector@npm:2.1.2"
+  dependencies:
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/fe827e0e95410aacfcc3eabc38c29cc36055257f03c1c06b631a2b5af9730c142ad2c52f5d64724d02231709617bda984701f52bd1f4b7aca50fb6585a27c1d2
   languageName: node
   linkType: hard
 
@@ -4024,7 +4083,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21, lodash@npm:~4.17.15":
+"lodash@npm:^4.17.21, lodash@npm:~4.17.15, lodash@npm:~4.17.5":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -4790,6 +4849,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ra-ui-materialui@npm:^5.13.2":
+  version: 5.13.2
+  resolution: "ra-ui-materialui@npm:5.13.2"
+  dependencies:
+    autosuggest-highlight: "npm:^3.1.1"
+    clsx: "npm:^2.1.1"
+    css-mediaquery: "npm:^0.1.2"
+    diacritic: "npm:^0.0.2"
+    dompurify: "npm:^3.2.4"
+    inflection: "npm:^3.0.0"
+    jsonexport: "npm:^3.2.0"
+    lodash: "npm:~4.17.5"
+    query-string: "npm:^7.1.3"
+    react-dropzone: "npm:^14.2.3"
+    react-error-boundary: "npm:^4.0.13"
+    react-hotkeys-hook: "npm:^5.1.0"
+    react-transition-group: "npm:^4.4.5"
+  peerDependencies:
+    "@mui/icons-material": ^5.16.12 || ^6.0.0 || ^7.0.0
+    "@mui/material": ^5.16.12 || ^6.0.0 || ^7.0.0
+    "@mui/system": ^5.15.20 || ^6.0.0 || ^7.0.0
+    "@mui/utils": ^5.15.20 || ^6.0.0 || ^7.0.0
+    "@tanstack/react-query": ^5.83.0
+    csstype: ^3.1.3
+    ra-core: ^5.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    react-hook-form: "*"
+    react-is: ^18.0.0 || ^19.0.0
+    react-router: ^6.28.1 || ^7.1.1
+    react-router-dom: ^6.28.1 || ^7.1.1
+  checksum: 10c0/6f0e25531bb1418c8bbe045c8b6f677947d2b38c8209569439755de818ff8ed3b77fa3ae42d6a73b043975c195d5a69e51bc350c0681fcfd4076bf4ef7f9d839
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^19.2.0":
   version: 19.2.0
   resolution: "react-dom@npm:19.2.0"
@@ -4798,6 +4892,19 @@ __metadata:
   peerDependencies:
     react: ^19.2.0
   checksum: 10c0/fa2cae05248d01288e91523b590ce4e7635b1e13f1344e225f850d722a8da037bf0782f63b1c1d46353334e0c696909b82e582f8cad607948fde6f7646cc18d9
+  languageName: node
+  linkType: hard
+
+"react-dropzone@npm:^14.2.3":
+  version: 14.3.8
+  resolution: "react-dropzone@npm:14.3.8"
+  dependencies:
+    attr-accept: "npm:^2.2.4"
+    file-selector: "npm:^2.1.0"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: 10c0/e17b1832783cda7b8824fe9370e99185d1abbdd5e4980b2985d6321c5768c8de18ff7b9ad550c809ee9743269dea608ff74d5208062754ce8377ad022897b278
   languageName: node
   linkType: hard
 
@@ -4818,6 +4925,16 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
   checksum: 10c0/f82238249d44111b377116bdfb6063045e3e81fef4c73d7f487160554fa4b43ff0970dec1f4d031e57bc2dfbdd974bdfba5608bc8c5785998a7b8a39a566428f
+  languageName: node
+  linkType: hard
+
+"react-hotkeys-hook@npm:^5.1.0":
+  version: 5.2.1
+  resolution: "react-hotkeys-hook@npm:5.2.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10c0/ccffc5aba9dcab1b4ee1fec5cdae7ad24bf4edda06b1293ba1ae7e4b6e2eaf1f087bc3e3fc413d7a91b1db55145e24c8b45ce51710f2e233a76fb5dcbf034f96
   languageName: node
   linkType: hard
 
@@ -4937,6 +5054,13 @@ __metadata:
   version: 0.5.0
   resolution: "remove-accents@npm:0.5.0"
   checksum: 10c0/a75321aa1b53d9abe82637115a492770bfe42bb38ed258be748bf6795871202bc8b4badff22013494a7029f5a241057ad8d3f72adf67884dbe15a9e37e87adc4
+  languageName: node
+  linkType: hard
+
+"remove-accents@npm:^0.4.2":
+  version: 0.4.4
+  resolution: "remove-accents@npm:0.4.4"
+  checksum: 10c0/7eaa1b6f586f22636c8ba7f0ac1f04887d5574d029598d4ea94fdbee6ff02fc70114e3227a673c297d6c6fa43c239696cf651baea1daccbaa6cbf1be0d85914d
   languageName: node
   linkType: hard
 
@@ -5581,7 +5705,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0":
+"tslib@npm:^2.4.0, tslib@npm:^2.7.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
