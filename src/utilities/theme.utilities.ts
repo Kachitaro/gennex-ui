@@ -1,10 +1,13 @@
 import type { Color, PaletteMode, ThemeOptions } from '@mui/material';
+import type { Components, Theme } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
+import { merge } from 'lodash';
 
 import {
   amber,
   blue,
   colors,
+  componentsOverride,
   cyan,
   fonts,
   grass,
@@ -17,7 +20,6 @@ import {
   tomato,
   Typography,
 } from '@/themes';
-import componentsOverride from '@/themes/core/overrides';
 
 export const GenColorPalette = (opts: { primaryColor: Color; secondaryColor: Color }) => {
   const { primaryColor, secondaryColor } = opts;
@@ -101,12 +103,22 @@ export const GenColorPalette = (opts: { primaryColor: Color; secondaryColor: Col
   };
 };
 
-export const renderTheme = (opts: {
+interface RenderThemeOptions {
   mode: PaletteMode;
   primaryColor?: Color;
   secondaryColor?: Color;
-}) => {
-  const { mode, primaryColor = blue, secondaryColor = lightBlue } = opts;
+  overrideOptions?: ThemeOptions;
+  overrideComponents?: (theme: Theme) => Partial<Components<Omit<Theme, 'components'>>>;
+}
+
+export const renderTheme = (props: RenderThemeOptions): Theme => {
+  const {
+    mode,
+    primaryColor = blue,
+    secondaryColor = lightBlue,
+    overrideOptions,
+    overrideComponents,
+  } = props;
   const themeTypography: any = Typography({ fontFamily: [fonts.roboto] });
   const theme = Palette({ mode, primaryColor, secondaryColor });
 
@@ -144,8 +156,17 @@ export const renderTheme = (opts: {
     typography: themeTypography,
   };
 
-  const themes: any = createTheme(themeOptions);
-  const components = componentsOverride({ theme: themes });
+  const mergeThemeOptions = { ...themeOptions, ...overrideOptions };
+
+  const themes: any = createTheme(mergeThemeOptions);
+
+  let components = componentsOverride({ theme: themes });
+
+  if (overrideComponents) {
+    components = merge(components, overrideComponents(themes));
+  }
+
   themes.components = components;
+
   return themes;
 };

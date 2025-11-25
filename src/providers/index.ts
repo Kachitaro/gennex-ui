@@ -1,1 +1,1 @@
-export * from './GlobalSettingProvider';
+export * from './GlobalThemeProvider';

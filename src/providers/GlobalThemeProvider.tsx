@@ -5,7 +5,7 @@ import { CssBaseline } from '@mui/material';
 import { DEFAULT_THEME, LOCALE_DEFAULT, THEME, ThemesMap } from '@/constants';
 import { Theme, ThemeMode, ThemeName } from '@/types';
 
-type GlobalSettingContextType = {
+type GlobalThemeContextType = {
   theme: Theme;
   themeName: ThemeName;
   setThemeName: (name: ThemeName) => void;
@@ -15,7 +15,7 @@ type GlobalSettingContextType = {
   setLocale: (locale: string) => void;
 };
 
-const GlobalSettingContext = React.createContext<GlobalSettingContextType>({
+const GlobalThemeContext = React.createContext<GlobalThemeContextType>({
   theme: ThemesMap[DEFAULT_THEME],
   themeName: DEFAULT_THEME,
   setThemeName: () => {},
@@ -25,7 +25,7 @@ const GlobalSettingContext = React.createContext<GlobalSettingContextType>({
   setLocale: () => {},
 });
 
-export const GlobalSettingContextProvider = ({ children }: { children: React.ReactNode }) => {
+export const GlobalThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
   // Theme state
   const [theme, setTheme] = React.useState<Theme>(() => {
     return ThemesMap[themeName] || ThemesMap[DEFAULT_THEME];
@@ -69,12 +69,12 @@ export const GlobalSettingContextProvider = ({ children }: { children: React.Rea
   );
 
   return (
-    <GlobalSettingContext.Provider
+    <GlobalThemeContext.Provider
       value={{ theme, themeName, setThemeName, themeMode, toggleThemeMode, locale, setLocale }}>
       <CssBaseline />
       {children}
-    </GlobalSettingContext.Provider>
+    </GlobalThemeContext.Provider>
   );
 };
 
-export const useGlobalSettingContext = () => React.useContext(GlobalSettingContext);
+export const useGlobalThemeContext = () => React.useContext(GlobalThemeContext);

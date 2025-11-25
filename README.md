@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Gennex UI Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a UI component library built with React and TypeScript, designed to provide reusable and customizable UI components for web applications.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- renderTheme function to generate theme based on primary, secondary color, mode, overrideOptions, and overrideComponents. Default is blue and light blue.
+- Customize the interface using Material-UI's theme builder feature.
+- hooks darkMode to toggle between light and dark themes.
 
-## React Compiler
+## Installation
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+You can install the library via npm:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install @gennextech/ui
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+or yarn:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+yarn add @gennextech/ui
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+## Usage
+
+Import the components and themes you need in your React application:
+
+```tsx
+import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import { renderTheme } from '@gennextech/ui';
+
+const App = () => {
+  const theme = renderTheme({
+    mode: 'light',
+    primaryColor: { main: '#1976d2' },
+    secondaryColor: { main: '#dc004e' },
+  });
+
+  return <ThemeProvider theme={theme}>{/* Your application components go here */}</ThemeProvider>;
+};
+export default App;
+```
+
+In `renderTheme`, you can customize the theme by providing options such as `mode`, `primaryColor`, `secondaryColor`, `overrideOptions`, and `overrideComponents`.
+
+```tsx
+const theme = renderTheme({
+  mode: 'dark',
+  primaryColor: { main: '#90caf9' },
+  secondaryColor: { main: '#f48fb1' },
+  overrideOptions: {
+    // Custom theme options
   },
-])
+  overrideComponents: (theme) => ({
+    // Custom component overrides
+  }),
+});
 ```
