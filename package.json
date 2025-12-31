@@ -28,6 +28,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "build:test": "yarn build && npm pack",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build"

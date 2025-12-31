@@ -25,7 +25,7 @@ export default function Button(theme: Theme) {
         textPrimary: {
           backgroundColor: theme.palette.primary.main,
           borderColor: theme.palette.primary.main,
-          color: theme.palette.primary.contrastText,
+          color: theme.palette.primary.light,
           '&:hover': {
             backgroundColor: theme.palette.primary.dark,
             borderColor: theme.palette.primary.dark,

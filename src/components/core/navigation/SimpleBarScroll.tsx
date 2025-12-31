@@ -6,6 +6,7 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import SimpleBar from 'simplebar-react';
 
 import { SimpleBarScrollProps } from '@/types';
+import { spaces } from '@/themes';
 
 const RootStyle = styled(BrowserView)({
   flexGrow: 1,
@@ -24,7 +25,7 @@ const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
     },
   },
   '& .simplebar-track.simplebar-vertical': {
-    width: 10,
+    width: spaces[8],
   },
   '& .simplebar-track.simplebar-horizontal .simplebar-scrollbar': {
     height: 6,
